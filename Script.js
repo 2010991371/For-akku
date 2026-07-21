@@ -240,3 +240,71 @@ showScene = function(index){
 /* First Scene */
 
 animateScene(0);
+
+/* ==========================================
+   PART 3
+   Animated Star Background
+========================================== */
+
+tsParticles.load("tsparticles", {
+    fullScreen: {
+        enable: false
+    },
+
+    background: {
+        color: {
+            value: "transparent"
+        }
+    },
+
+    fpsLimit: 60,
+
+    particles: {
+
+        number: {
+            value: 180
+        },
+
+        color: {
+            value: "#ffffff"
+        },
+
+        shape: {
+            type: "circle"
+        },
+
+        opacity: {
+            value: {
+                min: 0.2,
+                max: 0.9
+            }
+        },
+
+        size: {
+            value: {
+                min: 1,
+                max: 3
+            }
+        },
+
+        move: {
+
+            enable: true,
+
+            speed: 0.4,
+
+            direction: "none",
+
+            random: true,
+
+            outModes: {
+                default: "out"
+            }
+
+        }
+
+    },
+
+    detectRetina: true
+
+});

@@ -619,3 +619,78 @@ pointer-events:none;
         opacity: 0;
     }
 }
+
+/* Opening Cinematic Screen */
+
+.intro-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: white;
+    text-align: center;
+    animation: introFade 3s ease forwards;
+}
+
+.intro-screen h1 {
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: nameReveal 2.5s ease forwards;
+}
+
+.intro-screen p {
+    font-size: 22px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: textReveal 2.5s ease forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes nameReveal {
+    from {
+        opacity: 0;
+        transform: scale(1.4);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes introFade {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

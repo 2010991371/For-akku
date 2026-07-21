@@ -554,3 +554,19 @@ body{
 -moz-osx-font-smoothing:grayscale;
 
 }
+
+/* ==============================
+   Particle Layer
+============================== */
+
+#tsparticles{
+
+position:fixed;
+
+inset:0;
+
+z-index:-2;
+
+pointer-events:none;
+
+}

@@ -694,3 +694,66 @@ pointer-events:none;
         pointer-events: none;
     }
 }
+
+/* Final Ending Scene */
+
+.ending {
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #000000,
+        #140008
+    );
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+}
+
+
+.ending h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+
+.ending p {
+    max-width: 600px;
+    font-size: 21px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+
+.heart {
+    font-size: 70px;
+    margin: 40px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.ending h3 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

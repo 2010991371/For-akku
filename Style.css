@@ -570,3 +570,52 @@ z-index:-2;
 pointer-events:none;
 
 }
+
+/* Cinematic scene transitions */
+
+.scene {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease;
+}
+
+.scene.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Soft photo glow */
+
+.akku-photo {
+    transition: 1s ease;
+}
+
+.akku-photo.glow {
+    transform: scale(1.04);
+    filter: brightness(1.1);
+}
+
+
+/* Floating hearts */
+
+.floating-heart {
+    position: fixed;
+    bottom: -50px;
+    z-index: 5;
+    pointer-events: none;
+    animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
